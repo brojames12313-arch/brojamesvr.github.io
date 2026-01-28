@@ -1,6 +1,5 @@
 // ===== Smooth Scroll with Header Offset =====
 const navLinks = document.querySelectorAll('nav a');
-
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -18,7 +17,6 @@ navLinks.forEach(link => {
 
 // ===== Fade-in Sections on Scroll =====
 const sections = document.querySelectorAll('section');
-
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY + window.innerHeight * 0.8;
     sections.forEach(section => {
@@ -36,7 +34,7 @@ sections.forEach(section => {
     section.style.transform = 'translateY(50px)';
 });
 
-// ===== Hero Background Parallax =====
+// ===== Optional Hero Background Parallax =====
 const heroBg = document.querySelector('.hero-bg');
 if (heroBg) {
     let pos = 0;
@@ -46,9 +44,8 @@ if (heroBg) {
     }, 20);
 }
 
-// ===== Portfolio Lightbox with Tooltip =====
+// ===== Portfolio Lightbox =====
 const portfolioImages = document.querySelectorAll('.portfolio-gallery img');
-
 const lightboxOverlay = document.createElement('div');
 lightboxOverlay.id = 'lightbox-overlay';
 document.body.appendChild(lightboxOverlay);
